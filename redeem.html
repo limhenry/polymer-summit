@@ -1,0 +1,209 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Redeem</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#147BCC">
+
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+	<link rel="import" href="bower_components/font-roboto/roboto.html">
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
+	<link rel="import" href="bower_components/paper-card/paper-card.html">
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+	<link rel="import" href="bower_components/paper-input/paper-input.html">
+	<link rel="import" href="bower_components/iron-form/iron-form.html">
+	<link rel="import" href="bower_components/paper-input/paper-textarea.html">
+	<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+	<link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
+	<link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+	<link rel="import" href="bower_components/paper-toast/paper-toast.html" >
+
+    <link rel="stylesheet" href="css/radio.css" />
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+</head>
+
+<body>	
+
+  <paper-toast id="toast" text="text text" duration="3000"></paper-toast>
+
+  	<a href="index.html">
+		<paper-icon-button icon="arrow-back" style="position: absolute;"></paper-icon-button>
+	</a>
+
+
+	<div class="logo_header">
+		<img src="img/logo_big.png" id="polymer_logo">
+	</div>
+
+	<div class="banner">
+		<h1>Swag Redeem | Polymer Summit Extended MMU Cyberjaya 2015</h1>
+	</div>	
+  	
+  	<paper-card id="paper-form" style="text-align:center">
+  		<h3>Coming Soon...</h3>
+  	</paper-card>
+
+  	<!--This code sucks, you know it and I know it.  -->
+  	<!--This is not Google Forms. But this form is created by using Polymer and Firebase. Cool right?  -->
+  	<!-- I will uncomment this awesome thing once it's ready :) -->
+
+	<!-- <paper-card id="paper-form">
+		<div class="card-content">
+			<form is="iron-form" id="formGet" method="get" action="">
+				<h2>Basic Information</h2><br>
+				<paper-input name="name" id="form_name" label="Full Name" required></paper-input>
+				<paper-input name="email" id="form_email" label="Email" disabled></paper-input>
+				<paper-input name="studentid" id="form_studentid" type="number" label="Student ID" required></paper-input>
+				<paper-input name="phone" id="form_phone" type="tel" label="Phone Number"></paper-input><br><br><br>
+				
+				<h2>Event Survey *</h2>
+				<p><i>All Required Questions</i></p><br>
+				<p>Overall, how would you rate Polymer Summit Extended 2015?</p>
+				<label class="radio">
+					<input type="radio" name="question1" value="1" required>
+					<span class="outer"><span class="inner"></span></span>Excellent
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question1" value="2" required>
+					<span class="outer"><span class="inner"></span></span>Good
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question1" value="3" required>
+					<span class="outer"><span class="inner"></span></span>Average
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question1" value="4" required>
+					<span class="outer"><span class="inner"></span></span>Bad
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question1" value="5" required>
+					<span class="outer"><span class="inner"></span></span>Terrible
+				</label><br>	
+
+				<p>How much have you learned from Polymer Summit Extended 2015?</p>		
+				<label class="radio">
+					<input type="radio" name="question2" value="1" required>
+					<span class="outer"><span class="inner"></span></span>Damn a lot
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question2" value="2" required>
+					<span class="outer"><span class="inner"></span></span>A lot
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question2" value="3" required>
+					<span class="outer"><span class="inner"></span></span>A bit lah
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question2" value="4" required>
+					<span class="outer"><span class="inner"></span></span>Didn't learn anything
+				</label><br>					
+
+				<p>Was this event better than what you expected, worse than what you expected, or about what you expected?</p>
+				<label class="radio">
+					<input type="radio" name="question3" value="1" required>
+					<span class="outer"><span class="inner"></span></span>Way better than what was expected
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question3" value="2" required>
+					<span class="outer"><span class="inner"></span></span>Slightly Better than what was expected
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question3" value="3" required>
+					<span class="outer"><span class="inner"></span></span>About what was expected
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question3" value="4" required>
+					<span class="outer"><span class="inner"></span></span>Slightly worse than what was expected
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question3" value="5" required>
+					<span class="outer"><span class="inner"></span></span>Way worse than what was expected
+				</label><br>										
+
+				<p>Was Polymer Summit Extended 2015 too long, too short, or just about right?</p>
+				<label class="radio">
+					<input type="radio" name="question4" value="1" required>
+					<span class="outer"><span class="inner"></span></span>Just Nice
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question4" value="2" required>
+					<span class="outer"><span class="inner"></span></span>Too Long
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question4" value="3" required>
+					<span class="outer"><span class="inner"></span></span>Too Short
+				</label><br><br>	
+
+				<paper-textarea name="question5" id="question5" label="What did you like about Polymer Summit Extended 2015?" value=" "></paper-textarea>
+
+				<paper-textarea name="question6" id="question6" label="What did you dislike about Polymer Summit Extended 2015?" value=" "></paper-textarea>
+
+				<paper-textarea name="question7" id="question7" label="Is there anything you would like to tell the organiser (IT Society)?" value=" "></paper-textarea><br><br>
+
+				<h2>Swag</h2>
+
+				<p>T-shirt size</p>
+				<label class="radio">
+					<input type="radio" name="question8" value="S">
+					<span class="outer"><span class="inner"></span></span>S
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question8" value="M">
+					<span class="outer"><span class="inner"></span></span>M
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question8" value="L">
+					<span class="outer"><span class="inner"></span></span>L
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question8" value="XL">
+					<span class="outer"><span class="inner"></span></span>XL
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question8" value="No">
+					<span class="outer"><span class="inner"></span></span>I am not a T-shirt person
+				</label><br>
+
+				<p>Do you want extra stickers?</p>	
+				<label class="radio">
+					<input type="radio" name="question9" value="Y">
+					<span class="outer"><span class="inner"></span></span>Yes
+				</label><br>
+				<label class="radio">
+					<input type="radio" name="question9" value="N">
+					<span class="outer"><span class="inner"></span></span>No
+				</label><br><br><br>
+				<paper-checkbox required style="margin-left:6px; margin-bottom: 12px">I agree that I am human and I live in Earth. Sorry astronaut.</paper-checkbox><br>
+
+				<paper-button class="submit" raised onclick="clickHandler(event)">Submit</paper-button>	
+				<paper-button class="clear" onclick="clearform()">Clear</paper-button>	
+
+			</form>
+		</div>
+	</paper-card> -->
+
+	<div class="logo_footer">
+		<img src="img/badge_white.png" id="polymer_logo_footer">
+	</div>
+	<div class="footer">
+		<div class="footer-icon">
+			<paper-button tabindex="0" raised style="color: #3E3E3E;padding: 13px;">
+				<iron-icon icon="polymer" style="margin-right: 8px;"></iron-icon>Polymer
+			</paper-button>
+		</div>
+		<p>Polymer Summit Extended MMU Cyberjaya 2015 is organized by <a href="https://itsociety.rocks" style="text-decoration: none; color: #147BCC">IT Society MMU Cyberjaya</a>. <br>This page is created and developed by <a href="https://limhenry.me" style="text-decoration: none; color: #147BCC">Henry Lim</a></p>
+	</div>
+
+	<!--<script src="js/firebase.js"></script>-->
+</body>
+</html>

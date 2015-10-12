@@ -1,0 +1,25 @@
+#card-list{
+	display: block;
+    width: 80%;
+    margin: 16px auto;
+    padding: 24px;
+    max-width: 640px;
+}
+
+paper-tabs, paper-toolbar {
+	background-color: #147BCC;
+	color: #fff;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+paper-toolbar paper-tabs {
+	box-shadow: none;
+}
+
+paper-tabs[noink][no-bar] paper-tab.iron-selected {
+	color: #4FB6F7;
+}
+
+paper-tabs[align-bottom] {
+	box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.15);
+}
