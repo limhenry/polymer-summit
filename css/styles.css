@@ -1,221 +1,41 @@
-body{
-	background-color: #f2f2f2;
-	margin: 0;
-	font-family: Roboto;
-}
-
-#toast{
-	z-index: 100000;
-}
-.logo_header{
-	background-color: #4FB6F7;
-	margin-bottom: -25px;
-}
-
-#polymer_logo{
-	width: 50%;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 500px;
-}
-
-
-.logo_footer{
-	background-color: #147BCC;
-	padding: 24px 0;
-}
-
-#polymer_logo_footer{
-	width: 20%;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 250px;
-}
-
-.banner{
-	background: url(https://www.polymer-project.org/summit/images/Angle_Pattern/Lt_Blue_BG/Summit_AnglePattern_Blue_Sm.png) center center,
-	url(https://www.polymer-project.org/summit/images/Angle_Pattern/Lt_Blue_BG/Summit_AnglePattern_Blue_Lg.png) center center #147BCC;
-	height: 128px;
-	position: relative;
-}
-
-.banner h1{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5em;
-    color: white;
-    border-top: 3px white solid;
-    border-bottom: 3px white solid;
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-}
-
-.dark-banner{
-	background: url(https://www.polymer-project.org/summit/images/Angle_Pattern/DkBlue_Royal_Footer/Summit_AnglePattern_Sm.png) center center,
-	url(https://www.polymer-project.org/summit/images/Angle_Pattern/DkBlue_Royal_Footer/Summit_AnglePattern_Md.png) center center,
-	url(https://www.polymer-project.org/summit/images/Angle_Pattern/DkBlue_Royal_Footer/Summit_AnglePattern_Lg.png) center center #1F1F35;
-    background-size: 420px 210px,600px 300px,600px 600px;
-	position: relative;
-	padding: 24px 16px;
-	text-align: center;
-}
-
-.dark-banner h3{
-	color: #fff;
-	font-size: 2em;
-    line-height: 48px;
-    padding: 0;
-    margin: 0;
-}
-
-.dark-banner .divider{
-	width: 200px;
-    padding-top: 24px;
-    margin: 0 auto 24px;
-    border-bottom: 2px solid #4FB6F7;
-}
-
-.dark-banner .desc{
-	color: #4FB6F7;
-    text-align: center;
-    font-size: 1.5em;
-    line-height: 36px;
-    font-style: italic;
-}
-
-
-.youtube-video{
-	margin: 0 auto;
-    max-width: 720px;
-    padding: 24px 16px;
-}
-
-#home-card{
-	width: 80%;
-    margin: 30px auto;
-    display: block;
-    padding: 32px;
-    color: #147BCC;
-    max-width: 900px;
-}
-.card-content{
-	margin: 0 12px;
-}
-
-.card-content h3{
-	color: #4FB6F7;
-	font-size: 32px;
-	margin: 0;
-	font-size: 1.8em;
-}
-.card-content p{
-	font-size: 1.4em;
-}
-
-#paper-form{
-    display: inherit;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 48px;
-    margin-bottom: 48px;
-    padding: 86px;
-}
-
-.card-button{
-	background-color: #4FB6F7;
-    color: #fff;
-    width: 100%;
-}
-
-paper-icon-button{
-	color: white;
-	margin: 6px 12px;
-}
-
-.clear {
-	background: white;
-	color: red;
-}
-
-.submit{
-	background: #147BCC;
-	color: white;
-}
-
-.footer{
-	max-width: 720px;
-	margin: 24px auto;
-}
-
-.footer p{
-	font-size: 0.9em;
-	text-align: left;
-	color: #757575;
-	font-weight: 300;
-    padding: 0px 12px;
-    line-height: 20px;	
-}
-.footer-icon{
-    padding: 12px;
-    margin-bottom: 20px;
-    margin-top: 26px;
-}
-
-
-@media screen and (max-width: 640px) {
-	.logo_footer{
-		padding: 36px 0;
-	}
-	#polymer_logo_footer{
-		width: 60%;
-		display: block;
-	    margin-left: auto;
-	    margin-right: auto;
-	    max-width: 250px;
-	}
-	#paper-form{
-		width: 100%;
-		margin-top: 0;
-		margin-bottom: 0;
-		padding: 12px;
-	}
-	#polymer_logo {
-		width: 100%;
-	}
-	.banner h1{
-		padding: 20px 0;
-		font-size: 1.2em;
-	}
-	paper-icon-button{
-		color: white;
-		margin: 2px;
-	}
-	#home-card{
-		width: 100%;
-		margin: 12px 0;
-		padding: 24px;
-	}
-	.dark-banner h3 {
-		font-size: 1.5em;
-	}
-	.dark-banner .desc {
-		font-size: 1.2em;
-	}
-	.dark-banner .divider{
-		padding-top: 12px;
-		margin: 0 auto 12px;
-	}
-	.card-content h3{
-		font-size: 1.5em;
-	}
-	.card-content p {
-		font-size: 1.2em;
-	}
+body{background-color:#f2f2f2;margin:0;font-family:Roboto;}
+#toast{z-index:100000;}
+.logo_header{background-color:#4FB6F7;margin-bottom:-25px;}
+#polymer_logo{width:50%;display:block;margin-left:auto;margin-right:auto;max-width:500px;}
+.logo_footer{background-color:#147BCC;padding:24px 0;}
+#polymer_logo_footer{width:20%;display:block;margin-left:auto;margin-right:auto;max-width:250px;}
+.banner{background:url(https://www.polymer-project.org/summit/images/Angle_Pattern/Lt_Blue_BG/Summit_AnglePattern_Blue_Sm.png) center center,
+url(https://www.polymer-project.org/summit/images/Angle_Pattern/Lt_Blue_BG/Summit_AnglePattern_Blue_Lg.png) center center #147BCC;height:128px;position:relative;}
+.banner h1{margin:0;position:absolute;top:50%;left:50%;margin-right:-50%;transform:translate(-50%, -50%);font-size:1.5em;color:white;border-top:3px white solid;border-bottom:3px white solid;width:100%;text-align:center;padding:30px 0;}
+.dark-banner{background:url(https://www.polymer-project.org/summit/images/Angle_Pattern/DkBlue_Royal_Footer/Summit_AnglePattern_Sm.png) center center,
+url(https://www.polymer-project.org/summit/images/Angle_Pattern/DkBlue_Royal_Footer/Summit_AnglePattern_Md.png) center center,
+url(https://www.polymer-project.org/summit/images/Angle_Pattern/DkBlue_Royal_Footer/Summit_AnglePattern_Lg.png) center center #1F1F35;background-size:420px 210px,600px 300px,600px 600px;position:relative;padding:24px 16px;text-align:center;}
+.dark-banner h3{color:#fff;font-size:2em;line-height:48px;padding:0;margin:0;}
+.dark-banner .divider{width:200px;padding-top:24px;margin:0 auto 24px;border-bottom:2px solid #4FB6F7;}
+.dark-banner .desc{color:#4FB6F7;text-align:center;font-size:1.5em;line-height:36px;font-style:italic;}
+.youtube-video{margin:0 auto;max-width:720px;padding:24px 16px;}
+#home-card{width:80%;margin:30px auto;display:block;padding:32px;color:#147BCC;max-width:900px;}
+.card-content{margin:0 12px;}
+.card-content h3{color:#4FB6F7;font-size:32px;margin:0;font-size:1.8em;}
+.card-content p{font-size:1.4em;}
+#paper-form{display:inherit;width:80%;margin:0 auto;margin-top:48px;margin-bottom:48px;padding:86px;}
+.card-button{background-color:#4FB6F7;color:#fff;width:100%;}
+paper-icon-button{color:white;margin:6px 12px;}
+.clear{background:white;color:red;}
+.submit{background:#147BCC;color:white;}
+.footer{max-width:720px;margin:24px auto;}
+.footer p{font-size:0.9em;text-align:left;color:#757575;font-weight:300;padding:0px 12px;line-height:20px;}
+.footer-icon{padding:12px;margin-bottom:20px;margin-top:26px;}
+@media screen and (max-width:640px){.logo_footer{padding:36px 0;}
+#polymer_logo_footer{width:60%;display:block;margin-left:auto;margin-right:auto;max-width:250px;}
+#paper-form{width:100%;margin-top:0;margin-bottom:0;padding:12px;}
+#polymer_logo{width:100%;}
+.banner h1{padding:20px 0;font-size:1.2em;}
+paper-icon-button{color:white;margin:2px;}
+#home-card{width:100%;margin:12px 0;padding:24px;}
+.dark-banner h3{font-size:1.5em;}
+.dark-banner .desc{font-size:1.2em;}
+.dark-banner .divider{padding-top:12px;margin:0 auto 12px;}
+.card-content h3{font-size:1.5em;}
+.card-content p{font-size:1.2em;}
 }
